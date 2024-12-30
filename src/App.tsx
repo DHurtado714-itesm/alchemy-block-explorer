@@ -1,23 +1,18 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import { getLatestBlockNumber } from "./services/block";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Metrics from "./pages/Metrics";
+import { BrowserRouter, Route, Routes } from "react-router";
 
 function App() {
-  const [blockNumber, setBlockNumber] = useState<number | undefined>();
-
-  async function getBlockNumber() {
-    const result = await getLatestBlockNumber();
-    setBlockNumber(result);
-  }
-
-  useEffect(() => {
-    getBlockNumber();
-  }, []);
-
   return (
-    <div className="App">
-      <div>Block Number: {blockNumber}</div>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/metrics" element={<Metrics />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
