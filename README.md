@@ -20,7 +20,7 @@ This particular project is very much open-ended. We'll add some challenges here 
 
 Clone this project to pull down some basic starter code.
 
-After that cd into the base directory of the project and run `npm install` to download all the project dependencies.
+After that cd into the base directory of the project and run `pnpm install` to download all the project dependencies.
 
 In this project we chose to use React for a front-end and added minimal front-end code to get you going, but feel free to use any front-end stack you like.
 
@@ -79,10 +79,10 @@ Create an empty `.env` file in the base directory of this project.
 Add the following line to the `.env` file replacing `YOUR_ALCHEMY_API_KEY` with your api key.
 
 ```sh
-REACT_APP_ALCHEMY_API_KEY=YOUR_ALCHEMY_API_KEY
+VITE_ALCHEMY_API_KEY=YOUR_ALCHEMY_API_KEY
 ```
 
-Do not remove the `REACT_APP_` prefix. React uses that to import env variables.
+Do not remove the `VITE_` prefix. Vite uses that to import env variables.
 
 **⚠️ Note**
 
@@ -97,7 +97,7 @@ Do not remove the `REACT_APP_` prefix. React uses that to import env variables.
 
 ## 3. Start the webserver
 
-`npm start`
+`pnpm dev`
 
 Running the command above will run the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -144,3 +144,4 @@ Good luck and have fun!
 ## Nice to have
 
 - [ ] Receive a notification when a transaction is confirmed via email
+
