@@ -1,5 +1,9 @@
 import { alchemy } from "../libs/alchemy";
 
 export async function getLatestBlockNumber() {
-  return await alchemy.core.getBlockNumber();
+  try {
+    return await alchemy.core.getBlockNumber();
+  } catch (error) {
+    console.error(error);
+  }
 }
